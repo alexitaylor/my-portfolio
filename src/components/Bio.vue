@@ -5,6 +5,7 @@
         <div class="container">
           <div id="app">
             <h1>{{msg}}</h1>
+            <h5>{{skills}}</h5>
             <router-link to="/"><button class="btnRandom">Go Back</button></router-link>
           </div>
         </div>
@@ -15,10 +16,11 @@
 
 <script>
 export default {
-  name: 'projects',
+  name: 'bio',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'As an autonomous engineer with exposure to working in a collaborative environment; I am experience in exchanging software layers across the stack while producing maintainable, well-design applications.',
+      skills: 'Front-end: JavaScript ES5 & ES6, HTML5, CSS3, ReactJS, VueJS, AngularJS, Vuex, Flux, Redux and AJAX Back-end: NodeJS (ExpressJS), NPM and Yarn Databases: SQL (mySQL, SQLite, PostgreSQL), NoSQL (Redis, MongoDB) Others: Git, Heroku, Bootstrap, Material Design, Mocha, Chai, Webpack, Gulp, JQuery',
       isSlideOut: false,
       isSpin: true,
     };
