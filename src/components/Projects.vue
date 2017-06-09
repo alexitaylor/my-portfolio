@@ -5,7 +5,7 @@
         <div class="container">
           <div id="app">
             <h1>{{msg}}</h1>
-            <router-link to="/"><button class="btnRandom">Go Back</button></router-link>
+            <router-link to="/Nav"><button class="btnRandom">Go Back</button></router-link>
           </div>
         </div>
       </div>
