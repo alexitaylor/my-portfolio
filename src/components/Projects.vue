@@ -6,6 +6,18 @@
           <div id="app">
             <h1>{{msg}}</h1>
             <router-link to="/Nav"><button class="btnRandom">Go Back</button></router-link>
+            <div class="row">
+              <div class="col s4 m4 l4" v-for="project in projects">
+              <a v-bind:href="project.url" target="blank">
+                <div id="mars">
+                  <div class="container">
+                  <h4>{{project.name}}</h4>
+                  <h6>{{project.language}}</h6>
+                  </div>
+                </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -14,19 +26,35 @@
 </template>
 
 <script>
+import axios from 'axios';
+import _ from 'lodash';
+
 export default {
   name: 'projects',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
-      isSlideOut: false,
-      isSpin: true,
+      projects: [],
     };
   },
-  methods: {
-    slide: () => {
-      console.log(this.isSlideOut);
-    },
+  created() {
+    axios.get('https://api.github.com/users/alexitaylor/repos', {
+      params: {
+        type: 'all',
+      },
+    })
+    .then((res) => {
+      console.log('Success Response', res.data);
+      const filters = ['Vue-Rideability-App', 'serverFun', 'Fridgr', 'Gavin-The-Bot', 'hr-raptors', 'Photo-Hungry', 'my-portfolio'];
+      res.data.forEach((repo) => {
+        if (_.includes(filters, repo.name)) {
+          this.projects.push({ name: repo.name, url: repo.html_url, language: repo.language });
+        }
+      });
+    })
+    .catch((err) => {
+      console.log('Error', err);
+    });
   },
 };
 </script>
