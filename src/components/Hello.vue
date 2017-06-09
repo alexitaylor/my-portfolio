@@ -24,9 +24,9 @@
                       </section>
                       <div class="row">
                         <section id="links">
-                          <a target="_blank" href="mailto:alexi@bluesunrise.com"><i class="fa fa-envelope fa-size" aria-hidden="true"></i></a>
-                          <a target="_blank" href="https://github.com/alexitaylor"><i class="fa fa-github fa-size" aria-hidden="true"></i></a>
-                          <a target="_blank" href="https://www.linkedin.com/in/alexitaylor/"><i class="fa fa-linkedin fa-size" aria-hidden="true"></i></a>
+                          <a target="_blank" href="mailto:alexi@bluesunrise.com" class="icons"><i class="fa fa-envelope fa-size" aria-hidden="true"></i></a>
+                          <a target="_blank" href="https://github.com/alexitaylor" class="icons"><i class="fa fa-github fa-size" aria-hidden="true"></i></a>
+                          <a target="_blank" href="https://www.linkedin.com/in/alexitaylor/" class="icons"><i class="fa fa-linkedin fa-size" aria-hidden="true"></i></a>
                         </section>
                       </div>
                     </section>

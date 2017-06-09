@@ -108,7 +108,7 @@ p {
   margin-top: 2vw;
 }
 
-a {
+.icons {
   text-decoration: none;
   color: #555555;
   color: rgba(85, 85, 85, 0.9);
@@ -120,8 +120,8 @@ a {
   transition: color .5s ease-in-out;
 }
 
-a:not(.arrow-link):before,
-a:not(.arrow-link):after {
+.icons:not(.arrow-link):before,
+.icons:not(.arrow-link):after {
   content: '';
   position: absolute;
   top: 28px;
@@ -138,16 +138,16 @@ a:not(.arrow-link):after {
   color: rgba(17, 75, 142, 0.7);
 }
 
-a:before {
+.icons:before {
   left: 0;
 }
 
-a:after {
+.icons:after {
   right: 0;
 }
 
-a:hover:before,
-a:hover:after {
+.icons:hover:before,
+.icons:hover:after {
   width: 50%;
 }
 
