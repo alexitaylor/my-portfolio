@@ -239,9 +239,68 @@ img:hover{
   font-size: 4vw;
 }
 
+/* =========Roll Out========*/
+
+.spin-in {
+  transform: translateX(1000) rotate(0deg);
+  transition: all 1.75s ease;
+}
+
+.spin-in.show {
+  transform: translateX(-950px) rotate(720deg);
+  opacity: 1;
+}
+
+/* =========Buttons Styles========*/
+
+  .btnRandom {
+    -moz-transition: all, ease-in-out 0.5s;
+    -o-transition: all, ease-in-out 0.5s;
+    -webkit-transition: all, ease-in-out 0.5s;
+    transition: all, ease-in-out 0.5s;
+  }
+
+  .btnRandom {
+    color: #114b8e;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 1.6em;
+    margin: 3%;
+    border: none;
+    background: none;
+    position: relative;
+    display: inline-block;
+    letter-spacing: .0875em;
+    font-weight: 500;
+    border-radius: 100px;
+    outline: 0;
+  }
 
 
-/* =========Shadow Styles========*/
+  .btnRandom:hover {
+    color: #fff;
+    background: #de4f4f;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  .z-depth-1-half,
+  .btnRandom {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .z-depth-3,
+  .btnRandom:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .link {
+    text-decoration: none !important;
+    display: inline;
+  }
+
+  /* =========Shadow Styles========*/
 .z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
@@ -265,3 +324,5 @@ img:hover{
 .z-depth-5 {
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
+
+
