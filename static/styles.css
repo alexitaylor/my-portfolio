@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Lato:300";
+@import 'https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono';
 html, body, .background {
   width: 100%;
   height: 100%;
@@ -15,6 +16,8 @@ body {
   font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #fff;
   font-size: 24px;
+  height: auto;
+  width: auto;
 }
 
 .blended {
@@ -25,6 +28,16 @@ body {
 .background {
   background: -webkit-linear-gradient(330deg, rgba(50, 150, 100, 0.6), rgba(0, 0, 100, 0));
   background: linear-gradient(120deg, rgba(50, 150, 100, 0.6), rgba(0, 0, 100, 0));
+}
+
+.background-mars {
+  background: -webkit-linear-gradient(330deg, rgba(50, 150, 100, 0.6), rgba(0, 0, 100, 0));
+  background: linear-gradient(120deg, rgba(50, 150, 100, 0.6), rgba(0, 0, 100, 0));
+}
+
+.screencast {
+  height: 100vh;
+  width: 100vw;
 }
 
 .multicolor {
@@ -46,8 +59,27 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+}
+
+.multicolor-mars {
+  background: -webkit-linear-gradient(bottom, rgba(222, 79, 79, 0.7), rgba(0, 0, 200, 0));
+  background: linear-gradient(0deg, rgba(222, 79, 79, 0.7), rgba(0, 0, 200, 0));
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -247,7 +279,7 @@ img:hover{
   top: 1em;
 }
 
-.content {
+.hello-content {
   padding-top: 20%;
   text-align: center;
   width: 50vw;
@@ -271,14 +303,14 @@ img:hover{
 
 /* =========Buttons Styles========*/
 
-  .btnRandom {
+  .myBtn {
     -moz-transition: all, ease-in-out 0.5s;
     -o-transition: all, ease-in-out 0.5s;
     -webkit-transition: all, ease-in-out 0.5s;
     transition: all, ease-in-out 0.5s;
   }
 
-  .btnRandom {
+  .myBtn {
     color: #114b8e;
     font-size: 1em;
     text-transform: uppercase;
@@ -296,7 +328,7 @@ img:hover{
   }
 
 
-  .btnRandom:hover {
+  .myBtn:hover {
     color: #fff;
     background: #de4f4f;
     text-decoration: none;
@@ -304,12 +336,12 @@ img:hover{
   }
 
   .z-depth-1-half,
-  .btnRandom {
+  .myBtn {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
   }
 
   .z-depth-3,
-  .btnRandom:hover {
+  .myBtn:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   }
 
@@ -343,4 +375,203 @@ img:hover{
   box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
 }
 
+/* ================================
+Project Cards
+==================================*/
 
+.card-container {
+  display: inline-block;
+  width: 27vw;
+  height: 100vh;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  border-radius: 0.5em;
+  background-color: none;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+}
+
+.card-top {
+  width: 100%;
+  height: 11.43em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background-size: cover;
+  position: relative;
+}
+
+.card-top.VueJS {
+  background-image: url("https://cdn.auth0.com/blog/vuejs/vue-logo.png");
+}
+
+.card-top.ReactJS {
+  background-image: url("https://www.shareicon.net/data/512x512/2016/07/08/117367_logo_512x512.png");
+}
+
+.card-top.ideas {
+  background-image: url("http://lauterry.github.io/slides-prez-angular/img/angularjs.png");
+}
+
+.card-top.NodeJS {
+  background-image: url("https://s3.amazonaws.com/media-p.slid.es/uploads/207731/images/2409360/nodejs-new-pantone-white.png");
+}
+
+.blur {
+  background-image: linear-gradient(to bottom ,  rgba(69, 77, 91, 0.5) 0%,  rgba(43, 40, 50, 0.5) 60%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+
+}
+
+.card-top span.project-type {
+  width: 8.07em;
+  height: 2.53em;
+  position: absolute;
+  z-index: 1;
+  top: 3.19em;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2ca58d;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Roboto Mono', monospace;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.card-top span.project-type.VueJS {
+  background-color: #2ca58d;
+}
+
+.card-top span.project-type.ReactJS {
+  background-color: #00a8e8;
+}
+
+.card-top span.project-type.NodeJS {
+  background-color: #4caf50;
+  color: white;
+}
+
+.card-divider {
+  height: 0.31em;
+  width: 100%;
+  background-color: #2ca58d;
+  position: relative;
+}
+
+.card-divider.VueJS {
+  background-color: #2ca58d;
+}
+
+.card-divider.ReactJS {
+  background-color: #00a8e8;
+  width: 100%;
+}
+
+.card-divider.NodeJS {
+  background-color: #4caf50;
+  width: 100%;
+}
+
+
+
+.card-divider.VueJS span {
+  background-color: #ef233C;
+}
+
+.card-divider.ReactJS span {
+  background-color: #00a8e8;
+}
+
+.card-divider.NodeJS span {
+  background-color: #4caf50;
+  color: white;
+}
+
+.content {
+  display: flex column;
+  position:relative;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.26em 1.59em;
+}
+.details span:nth-child(1) {
+  font-size: 0.89em;
+  color: white;
+}
+
+.details span:nth-child(2) {
+  font-size: 1.59em;
+  transform: rotate(-90deg);
+}
+
+.title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 1.12em;
+}
+
+.summary {
+  color: white;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  font-size: 0.89em;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.12em;
+  border: 0px solid #000;
+}
+
+.info {
+  width: 33.333333%;
+  display: flex column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-additions {
+  color: #4caf50;
+}
+
+.info-deletions {
+  color: #f44336;
+}
+
+.info-commits {
+  color: #9c27b0;
+}
+
+.info span {
+  display: block;
+  margin: 0.81em 0;
+  text-align: center;
+}
+
+.info span:nth-child(1) {
+  font-size: 1em;
+  font-weight: light;
+   font-family: 'Roboto Mono', monospace;
+}
+
+.info span:nth-child(2) {
+  text-transform: uppercase;
+}

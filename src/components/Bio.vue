@@ -1,12 +1,13 @@
 <template>
 
-    <div class="background">
-      <div class="multicolor">
+    <div class="background-mars screencast">
+      <div class="multicolor-mars screencast">
         <div class="container">
           <div id="app">
-            <h1>{{msg}}</h1>
+          <router-link class="links" to="/"><button class="myBtn">Home</button></router-link>
+            <router-link class="links" to="/Projects"><button class="myBtn">Projects</button></router-link>
+            <h4>{{msg}}</h4>
             <h5>{{skills}}</h5>
-            <router-link to="/Nav"><button class="btnRandom">Go Back</button></router-link>
           </div>
         </div>
       </div>
@@ -37,14 +38,14 @@ export default {
 <style scoped>
   /* Buttons */
 
-  .btnRandom {
+  .myBtn {
     -moz-transition: all, ease-in-out 0.5s;
     -o-transition: all, ease-in-out 0.5s;
     -webkit-transition: all, ease-in-out 0.5s;
     transition: all, ease-in-out 0.5s;
   }
 
-  .btnRandom {
+  .myBtn {
     color: #114b8e;
     font-size: 1em;
     text-transform: uppercase;
@@ -62,7 +63,7 @@ export default {
   }
 
 
-  .btnRandom:hover {
+  .myBtn:hover {
     color: #fff;
     background: #de4f4f;
     text-decoration: none;
@@ -70,12 +71,12 @@ export default {
   }
 
   .z-depth-1-half,
-  .btnRandom {
+  .myBtn {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
   }
 
   .z-depth-3,
-  .btnRandom:hover {
+  .myBtn:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
   }
 

@@ -1,22 +1,22 @@
 <template>
 
-    <div class="background">
-      <div class="multicolor">
+    <div class="background screencast">
+      <div class="multicolor screencast">
         <div class="container">
           <div id="app">
             <div class="row">
               <div class="col s12 m12 l12">
 
                 <div id="moon" v-bind:class="{ 'spin-in': isSpin, show: isSlideOut }">
-                  <div class="content">
+                  <div class="hello-content">
                     <section id="intro">
                       <section id="name">
                         <div id="name-first">Alexi</div>
                         <div id="name-last">Taylor</div>
                       </section>
                       <section id="title">
-                        <div id="title-first">Web</div>
-                        <div id="title-second">Developer</div>
+                        <div id="title-first">Full-Stack</div>
+                        <div id="title-second">Engineer</div>
                       </section>
                       <section id="subtitle">
                         <div id="name-first">Lets Make The Web More Beautiful,</div>
@@ -31,7 +31,7 @@
                       </div>
                     </section>
                     <div class="row">
-                      <router-link class="links" to="/Nav"><button class="btnRandom" v-on:click="isSlideOut = !isSlideOut">LEARN MORE</button></router-link>
+                      <router-link class="links" to="/Nav"><button class="myBtn" v-on:click="isSlideOut = !isSlideOut">LEARN MORE</button></router-link>
                     </div>
                   </div>
                 </div>
